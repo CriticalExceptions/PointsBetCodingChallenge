@@ -5,7 +5,7 @@ namespace PointsBetStringFormatterProject.Extensions
     public static class StringFormatter
     {
         /// <summary>
-        /// Formats string list into CSV format with optional quotes around items.
+        /// Formats string list into CSV format (with spaces and optional quotes) around items.
         /// </summary>
         /// <param name="items">list of string items that will be concatenated by comma.</param>
         /// <param name="addQuotes">optional bool to surround each item with quotes.</param>
@@ -24,6 +24,7 @@ namespace PointsBetStringFormatterProject.Extensions
                 // For next item in list prepend comma. Also avoid adding comma on first item.
                 if (i > 0)
                 {
+                    // unsure of requirements with the space, will need to confirm
                     query.Append(", ");
                 }
 
